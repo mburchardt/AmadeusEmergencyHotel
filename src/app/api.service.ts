@@ -19,13 +19,17 @@ export class ApiService {
 
   getHotels(lat, long): Observable<any> {
 
+    var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+
     let params = new HttpParams()
       .set('apikey', 'Iv07ADtpyFSu3htOI9k30tguwxeGj9ig')
       .set('latitude', lat)
       .set('longitude', long)
       .set('radius', '50')
-      .set('check_in', '2018-12-15')
-      .set('check_out', '2018-12-16')
+      .set('check_in', today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate())
+      .set('check_out', tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDate())
       .set('number_of_results', '12');
 
     return this.http.get(this.endpoint, {params}).pipe(
