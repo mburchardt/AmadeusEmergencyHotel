@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body {
+	background-color: #FAFAFA;
+	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	overflow-x: hidden;
+}
+
+
+/* General Classes
+============================================================ */
+a {
+	color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+  	color: inherit;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    outline: none;
+  }
+}
+.clearfix:after, html:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.right{ float: right; }
+.left{ float: left; }
+p{ line-height: 20px; margin-bottom: 10px; }
+.colorgray{ color: #666666; }
+.mb0{ margin-bottom: 0px !important; }
+.mb10{ margin-bottom: 10px !important; }
+.mb20{ margin-bottom: 20px !important; }
+.mb20mobile{ margin-bottom: 0; }
+.mb40{ margin-bottom: 40px !important; }
+.mb60{ margin-bottom: 60px !important; }
+.ml0{ margin-left: 0 !important; }
+.mr10{ margin-right: 10px !important; }
+.pa20{ padding: 20px !important; }
+.pb0{ padding-bottom: 0 !important; }
+.ptb15{ padding-top: 15px; padding-bottom: 15px; }
+.palr20{ padding-left: 20px !important; padding-right: 20px !important; }
+.patb40{ padding-top: 40px !important; padding-bottom: 40px !important; }
+.pa30{ padding: 30px; }
+.contcenter{ text-align: center; }
+.contleft{ text-align: left; }
+.inlineblock{ display: inline-block; }
+.hauto{ height: auto !important; min-height: auto !important; }
+ul.inline{
+	display: inline-block;
+	overflow: hidden;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+	ul.inline li{
+		display: block;
+		float: left;
+		list-style-type: none;
+		margin-right: 10px;
+	}
+		ul.inline li:last-child,
+		ul.inline.mr20 li:last-child{ margin-right: 0; }
+	
+	ul.inline.mr20 li{ margin-right: 20px; }
+	ul.inline.mb10 li{ margin-bottom: 10px; }
+		
+.onlymobile{ display: none; }
+
+*:focus{
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+}
+*:active, *:active, *:focus{ text-decoration: none; }
+
+.wrapper.toggled .sidebar-wrapper { width: 290px; }
+
+/* Font Icons
+============================================================ */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('assets/fonts/icomoon.eot?ufufut');
+  src:  url('assets/fonts/icomoon.eot?ufufut#iefix') format('embedded-opentype'),
+    url('assets/fonts/icomoon.ttf?ufufut') format('truetype'),
+    url('assets/fonts/icomoon.woff?ufufut') format('woff'),
+    url('assets/fonts/icomoon.svg?ufufut#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before { content: "\e901"; }
+.icon-refresh:before { content: "\e900"; }
+.icon-cross:before { content: "\e117"; }
+.icon-location:before { content: "\e600"; }
+.icon-plus:before { content: "\e601"; }
+.icon-arrow_down:before { content: "\e602"; }
+.icon-menu:before { content: "\e603"; }
+.icon-heart:before { content: "\f004"; }

@@ -1,0 +1,234 @@
+/* Flip Card
+============================================================ */
+ul{ list-style: none; padding-left: 0; }
+
+.card .front, .card .back{
+	position: relative;
+	max-width: 100% !important;
+	z-index: 1;
+}
+.properties{ padding: 20px 0; min-height: 700px; }
+	.properties .card{ margin-bottom: 40px; }
+	.properties .card .front .photo{
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		overflow: hidden;
+		position: relative;
+		height: 200px;
+	}
+		.properties .card .front .photo img{
+			max-width: 120%;
+		}
+		.properties .card .front .photo:after{
+			background-color: rgba(0,0,0,0.4);
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+		.properties .card .front .photo .info{
+			color: #FFFFFF;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 20px;
+			width: 100%;
+			z-index: 10;
+		}
+			.properties .card .front .photo .info h3{
+				margin-top: 0;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			.properties .card ul.inline.detailproperties li{
+				font-size: 18px;
+				margin-right: 30px;
+				position: relative;
+				height: 27px;
+			}
+				.properties .card ul.inline.detailproperties li:last-child{ margin-right: 0px; }
+
+		.properties .card .white{
+			background-color: #FFFFFF;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			padding: 20px 10px 64px 10px;
+		}
+			.properties .card .white ul.inline{ overflow: inherit; }
+			.properties .card .white ul.inline a {
+		    background-color: #fcfcfc;
+		    box-shadow: 1px 2px 3px rgba(0,0,0,0.1) inset;
+		    border-radius: 100%;
+		    display: block;
+		    padding: 7px;
+			}
+				.properties .card .white ul.inline a:hover{ text-decoration: none; }
+				.properties .card .white ul.inline a:hover span{ background-color: #E2E2E2; }
+
+			.properties .card .white ul.inline a span{
+				background-color: #FFFFFF;
+				box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+				border-radius: 100%;
+				display: block;
+				height: 57px;
+				width: 57px;
+				line-height: 57px;
+				text-align: center;
+				text-shadow: 1px 1px #FFFFFF;
+				transition: all linear 0.2s;
+			}
+					.properties .card .white ul.inline a span i{
+						vertical-align: middle;
+						top: -3px ;
+						position: relative;
+					}
+			.properties .card .white ul.inline a.location{ margin-top: 12px; }
+			.properties .card .white ul.inline a.location span {
+		    color: #5f5d5c;
+		    display: inline-block;
+		    font-size: 19px;
+		    height: 38px;
+		    line-height: 38px;
+		    width: 38px;
+			}
+			.properties .card .white ul.inline a.fav span {
+				color: #E33367;
+				display: inline-block;
+				font-size: 25px;
+			}
+			.properties .card .white ul.inline a.closecard { color: #CCCCCC; font-size: 32px; }
+				.properties .card .white ul.inline a.closecard span i{ top: -5px; }
+
+			.properties .card .white .btnrequest{
+				background-color: #1565B7;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				color: #FFFFFF;
+				display: block;
+				font-size: 15px;
+				font-weight: 500;
+				height: 44px;
+				line-height: 44px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				text-align: center;
+				width: 100%;
+			}
+				.properties .card .white .btnrequest i{
+					display: inline-block;
+					font-size: 20px;
+					position: relative;
+					top: 2px;
+					margin-right: 5px;
+				}
+				.properties .card .white .btnrequest:hover{ background-color: #1B77D4; text-decoration: none; }
+				.properties .card .white .btnrequest:active{ background-color: #165BA2; text-decoration: none; }
+
+		.properties .card .back{
+			background-color: #FFFFFF;
+			color: #535353;
+			position: relative;
+			text-align: center;
+		}
+			.properties .card .back h4{
+				color: #207DCC;
+				font-size: 20px;
+				font-weight: 600;
+				max-width: 90%;
+				margin: 0 auto 10px;
+				padding-top: 20px;
+			}
+		.properties .card .back p.title{ position: relative; }
+			.properties .card .back p.title:before{
+				background-color: #E4E4E4;
+				height: 1px;
+				content: '';
+				top: 9px;
+				position: absolute;
+				left: 0;
+				width: 100%;
+			}
+				.properties .card .back p.title span {
+			    background-color: #ffffff;
+			    font-size: 14px;
+			    letter-spacing: 1.2px;
+			    margin-bottom: 0;
+			    padding: 5px 10px;
+			    position: relative;
+			    text-transform: uppercase;
+			    z-index: 5;
+				}
+
+	.card{
+		border-radius: 8px;
+		cursor: pointer;
+		position: relative;
+		width: 100%;
+	}
+		.card, .front, .back{ height: 335px; }
+		.card .btnflip{
+			background: url('../../assets/images/misc/topcard.svg') no-repeat left top;
+			border-top-right-radius: 8px;
+			background-size: 60px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 60px;
+			width: 60px;
+			pointer-events: none;
+			z-index: 2;
+		}
+			.card .btnflip i{
+				background-repeat: no-repeat;
+				background-size: 20px;
+				height: 20px;
+		    position: absolute;
+		    right: 9px;
+		    top: 10px;
+		    width: 20px;
+			}
+				.card .front .btnflip i{ background-image: url('../../assets/images/misc/front.png'); }
+				.card .back .btnflip i{ background-image: url('../../assets/images/misc/back.png'); }
+
+span.point {
+	display: inline-block;
+	font-size: 11px;
+	padding: 0 5px;
+	position: relative;
+	top: -2px;
+}
+
+.linkunderlineblue{
+	color: #1B77D4;
+	font-size: 15px;
+	font-weight: 600;
+	text-decoration: underline;
+	padding-left: 23px;
+	position: relative;
+}
+	.linkunderlineblue:after{
+		font-family: 'icomoon';
+		content: "\e600";
+    font-size: 22px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+  }
+
+.loading {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:980px) {
+	.properties .card{
+		max-width: 350px;
+		margin: 0 auto 20px;
+	}
+}
